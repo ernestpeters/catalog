@@ -3,12 +3,12 @@
 ## About
 A website run by Python that holds information about dishes from various global cuisines.
 ## Prerequisites
-Python
-Web browser
-Google account
-Werkzeug 0.8.3: `sudo pip install werkzeug==0.8.3`
-Flask 0.9: `sudo pip install flask==0.9`
-Flask-Login 0.1.3 `sudo pip install Flask-Login==0.1.3`
+- Python
+- Web browser
+- Google account
+- Werkzeug 0.8.3: `sudo pip install werkzeug==0.8.3`
+- Flask 0.9: `sudo pip install flask==0.9`
+- Flask-Login 0.1.3 `sudo pip install Flask-Login==0.1.3`
 ### Directions
 Unzip catalog.zip.
 Open a terminal where you unzipped.
