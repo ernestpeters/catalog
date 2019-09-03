@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link rel=stylesheet type=text/css href='{{url_for('static', filename='styles.css')}}'>
+  </head>
+
+  <body>
+    {% include "header.html" %}
+    <h2>{{cuisine.name}} Dishes</h2>
+      {% for i in dishes %}
+        <h3>{{i.name}}</h3>
+        <hr/>
+        <div id='dishes'>
+          <div id='dishdescription'>
+            {{i.description}}
+          </div>
+        </div>
+        <hr/>
+      {% endfor %}
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link rel=stylesheet type=text/css href='{{url_for('static', filename='styles.css')}}'>
+  </head>
+
+  <body>
+    {% include "header.html" %}
+    <h2>{{cuisine.name}} Dishes</h2>
+      {% for i in dishes %}
+        <h3>{{i.name}}</h3>
+        {% if user_id == i.user_id %}
+        <a href='{{url_for('editDish', cuisine_id=cuisine.id, dish_id=i.id)}}'>Edit</a>
+        <a href='{{url_for('deleteDish', cuisine_id=cuisine.id, dish_id=i.id)}}'>Delete</a>
+        {% endif %}
+        <hr/>
+        <div id='dishes'>
+          <div id='dishdescription'>
+            {{i.description}}
+          </div>
+        </div>
+        <hr/>
+      {% endfor %}
+
+    <a href='{{url_for('newDish', cuisine_id=cuisine.id)}}'>Add a new dish</a>
+  </body>
+</html>

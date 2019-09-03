@@ -1,0 +1,14 @@
+<link href="https://fonts.googleapis.com/css?family=Cardo|Ultra&display=swap" rel="stylesheet">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="280298940303-e5tq788elcb4m2f2m7nrt61o1nbdpkfe.apps.googleusercontent.com">
+<div class='top-menu'>
+  <h1>
+    <a class='left' href='{{url_for('showCatalog')}}'>Cuisine Catalog</a>
+    {% if 'username' not in session %}
+      <a class='right' href='{{url_for('showLogin')}}'>Log in with Google</a>
+    {% else %}
+      <a class='right' href='{{url_for('gdisconnect')}}'>Log Out</a>
+    {% endif %}
+    <div class='clear'></div>
+  </h1>
+</div>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link rel=stylesheet type=text/css href='{{url_for('static', filename='styles.css')}}'>
+  </head>
+
+  <body>
+    {% include "header.html" %}
+    <h2>Cuisines</h2>
+    <p>
+      {% for cuisine in cuisines %}
+        <a href="{{url_for('showDishes', cuisine_id=cuisine.id)}}">{{cuisine.name}}</a>
+        <br>
+        <br>
+      {% endfor %}
+    </p>
+  </body>
+</html>
